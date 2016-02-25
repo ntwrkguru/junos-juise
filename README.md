@@ -1,5 +1,3 @@
-# junos-juise
-
 # DOCUMENTATION
 
 Check our [github release page](https://github.com/juniper/juise) to find the latest release.
