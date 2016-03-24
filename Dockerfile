@@ -30,3 +30,5 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev \
 \
 && apt-get clean \
 && apt-get purge
+
+EXPOSE 3000
