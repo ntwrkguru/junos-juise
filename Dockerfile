@@ -1,4 +1,8 @@
-FROM ubuntu:14.04 MAINTAINER ntwrkguru@gmail.com ENV DEBIAN_FRONTEND noninteractive RUN \
+FROM ubuntu:14.04 
+MAINTAINER ntwrkguru@gmail.com 
+ENV DEBIAN_FRONTEND noninteractive 
+
+RUN \
 apt-get update \
 && apt-get install -y libcurl3-dev libxslt1-dev libxml2-dev libedit2 \
 build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev \
