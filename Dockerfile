@@ -1,13 +1,8 @@
-FROM ubuntu:14.04
-MAINTAINER ntwrkguru@gmail.com
-
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN \
+FROM ubuntu:14.04 MAINTAINER ntwrkguru@gmail.com ENV DEBIAN_FRONTEND noninteractive RUN \
 apt-get update \
 && apt-get install -y libcurl3-dev libxslt1-dev libxml2-dev libedit2 \
 build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev \
-libssh2-1 wget \
+\
 && git clone https://github.com/Juniper/libslax.git \
 && cd libslax \
 && sh bin/setup.sh \
@@ -29,9 +24,5 @@ libssh2-1 wget \
 && make \
 && make install \
 \
-&& wget https://github.com/Juniper/juise/releases/download/0.7.0/juise_0.7.0-2.amd64.deb \
-&& dpkg -i juise_0.7.0-2.amd64.deb \
 && apt-get clean \
 && apt-get purge
-
-EXPOSE 3000
