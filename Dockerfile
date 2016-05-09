@@ -18,13 +18,4 @@ pcre-dev \
 libbz2 \
 autoconf \
 automake \
-libtool \
-\
-&& git clone https://github.com/Juniper/libslax.git \
-&& cd libslax \
-&& sh bin/setup.sh \
-&& cd build \
-&& ../configure \
-&& make \
-&& make install
-
+libtool
