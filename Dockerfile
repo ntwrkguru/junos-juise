@@ -1,34 +1,30 @@
-FROM ubuntu:14.04 
-MAINTAINER ntwrkguru@gmail.com 
-ENV DEBIAN_FRONTEND noninteractive 
+FROM alpine
 
-RUN \
-apt-get update \
-&& apt-get install -y libcurl3-dev libxslt1-dev libxml2-dev libedit2 \
-build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev \
-\
+MAINTAINER ntwrkguru@gmail.com
+
+RUN apk update && apk add \
+libcurl \
+libxslt \
+libxml2-dev \
+libedit-dev \
+make \
+gcc \
+g++ \
+libc-dev \
+bison \
+git \
+m4 \
+pcre-dev \
+libbz2 \
+autoconf \
+automake \
+libtool
+
 && git clone https://github.com/Juniper/libslax.git \
 && cd libslax \
 && sh bin/setup.sh \
-&& cd build && ../configure --libdir=/usr/lib/x86_64-linux-gnu \
-&& make && make install \
-\
-&& cd ../.. \
-&& git clone https://github.com/Juniper/juise.git \
-&& cd juise \
-&& sh bin/setup.sh && cd build \
-&& ../configure --libdir=/usr/lib/x86_64-linux-gnu \
-&& make && make install \
-\
-&& cd ../.. && git clone https://github.com/Juniper/lighttpd-for-juise.git \
-&& cd lighttpd-for-juise \
-&& sh bin/setup.sh \
 && cd build \
-&& ../configure --libdir=/usr/lib/x86_64-linux-gnu \
+&& ../configure \
 && make \
-&& make install \
-\
-&& apt-get clean \
-&& apt-get purge
+&& make install
 
-EXPOSE 3000
