@@ -3,7 +3,7 @@ FROM alpine
 MAINTAINER ntwrkguru@gmail.com
 
 RUN apk update && apk add \
-libcurl \
+curl-dev \
 libxslt \
 libxml2-dev \
 libedit-dev \
