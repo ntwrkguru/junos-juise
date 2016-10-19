@@ -1,6 +1,6 @@
-FROM ubuntu:14.04 
-MAINTAINER ntwrkguru@gmail.com 
-ENV DEBIAN_FRONTEND noninteractive 
+FROM ubuntu:14.04
+MAINTAINER ssteiner@juniper.net
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
 apt-get update \
