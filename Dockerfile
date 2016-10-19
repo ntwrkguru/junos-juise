@@ -10,7 +10,7 @@ ADD https://github.com/Juniper/lighttpd-for-juise/releases/download/lighttpd-for
 RUN \
 apt-get update \
 && apt-get install -y libcurl3-dev libxslt1-dev libxml2-dev libedit2 \
-build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
+build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 python-dev \
 \
 && git clone https://github.com/Juniper/libslax.git \
 && cd libslax \
