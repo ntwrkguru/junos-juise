@@ -13,13 +13,6 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 && cd build && ../configure --libdir=/usr/lib/x86_64-linux-gnu \
 && make && make install \
 \
-&& cd ../.. \
-&& git clone https://github.com/Juniper/juise.git \
-&& cd juise \
-&& sh bin/setup.sh && cd build \
-&& ../configure --libdir=/usr/lib/x86_64-linux-gnu \
-&& make && make install \
-\
 && cd ../.. && git clone https://github.com/Juniper/lighttpd-for-juise.git \
 && cd lighttpd-for-juise \
 && sh bin/setup.sh \
@@ -27,6 +20,13 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 && ../configure --libdir=/usr/lib/x86_64-linux-gnu \
 && make \
 && make install \
+\
+&& cd ../.. \
+&& git clone https://github.com/Juniper/juise.git \
+&& cd juise \
+&& sh bin/setup.sh && cd build \
+&& ../configure --libdir=/usr/lib/x86_64-linux-gnu \
+&& make && make install \
 \
 && apt-get clean \
 && apt-get purge
