@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN \
 apt-get update \
 && apt-get install -y libcurl3-dev libxslt1-dev libxml2-dev libedit2 \
-build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev \
+build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 \
 && git clone https://github.com/Juniper/libslax.git \
 && cd libslax \
