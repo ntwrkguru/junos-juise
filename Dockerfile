@@ -18,9 +18,9 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 && cd build && ../configure --libdir=/usr/lib/x86_64-linux-gnu \
 && make && make install \
 \
-&& cd ../.. && dpkg-i lighttpd-for-juise_1.4.33-JNPR-1_amd64.deb \
-\
-&& dpkg -i juise_0.7.0-2.amd64.deb
+&& cd ../.. \
+&& dpkg -i lighttpd-for-juise_1.4.33-JNPR-1_amd64.deb \
+&& dpkg -i juise_0.7.0-2.amd64.deb \
 \
 && apt-get clean \
 && apt-get purge \
