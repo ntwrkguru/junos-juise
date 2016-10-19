@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/juniper/junos-juise.svg)](https://microbadger.com/images/juniper/junos-juise "Get your own image badge on microbadger.com")
+
 # DOCUMENTATION
 
 Check our [github release page](https://github.com/juniper/juise) to find the latest release.
