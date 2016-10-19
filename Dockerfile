@@ -4,9 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /build
 
-ADD https://github.com/Juniper/juise/releases/download/0.7.0/juise_0.7.0-2.amd64.deb
-ADD https://github.com/Juniper/lighttpd-for-juise/releases/download/lighttpd-for-juise-1.4.33-JNPR-1/lighttpd-for-juise_1.4.33-JNPR-1_amd64.deb
-ADD
+ADD https://github.com/Juniper/juise/releases/download/0.7.0/juise_0.7.0-2.amd64.deb .
+ADD https://github.com/Juniper/lighttpd-for-juise/releases/download/lighttpd-for-juise-1.4.33-JNPR-1/lighttpd-for-juise_1.4.33-JNPR-1_amd64.deb .
 
 RUN \
 apt-get update \
