@@ -19,9 +19,22 @@ Please log all issues in the [Github project](https://github.com/ntwrkguru/junos
 
 # INSTALLATION
 
-`docker pull juniper/junos-juise`
-`docker run -it juniper/junos-juise /bin/bash`
+    docker pull juniper/junos-juise
 
+# USAGE
+
+Start the container:
+
+    docker run -it juniper/junos-juise /bin/bash
+
+Or maybe you'd like to mount the directory where your SLAX scripts are:
+
+    docker run -it -v /some/path:/scripts /bin/bash
+
+Mount the current directory as /scripts in the container. Also, give it a name so you can restart it easily.
+
+    docker run -it --rm --name MyPyEZ -v $PWD:/scripts
+    
 # TODO
 
 - Add CLIRA
