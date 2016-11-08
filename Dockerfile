@@ -39,4 +39,6 @@ WORKDIR /import
 
 RUN cp /usr/local/share/juise/import/junos.xsl ./junos.xsl
 
+ENTRYPOINT ["slaxproc","--check"]
+
 EXPOSE 3000
