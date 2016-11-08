@@ -37,6 +37,6 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 
 WORKDIR /import
 
-RUN cp /usr/local/share/juise/import/junos.xsl /import/junos.xsl
+RUN cp /usr/local/share/juise/import/junos.xsl ./junos.xsl
 
 EXPOSE 3000
