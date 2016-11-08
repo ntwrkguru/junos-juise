@@ -33,8 +33,10 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 && apt-get clean \
 && apt-get purge \
 \
-&& rm -rf /tmp \
-\
-&& cp /usr/local/share/juise/import/junos.xsl /import/junos.xsl
+&& rm -rf /tmp
+
+WORKDIR /import
+
+&& cp /usr/local/share/juise/import/junos.xsl ./junos.xsl
 
 ENTRYPOINT ["slaxproc","--check"]
