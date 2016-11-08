@@ -35,6 +35,10 @@ Mount the current directory as /scripts in the container. Also, give it a name s
 
     docker run -it --rm --name MyPyEZ -v $PWD:/scripts
     
+Run the container as an executable to test a some_script in /some/dir and cleanly remove it when done.
+
+    docker run --rm juniper/junos-juise -v /some/dir:/scripts slaxproc --check some_script.slax
+    
 # TODO
 
 - Add CLIRA
