@@ -35,6 +35,6 @@ build-essential bison dh-autoreconf git libpcre3-dev libbz2-dev libssh2-1 \
 \
 && rm -rf /tmp/* \
 \ 
-export PATH=$PATH:/usr/local/share
+ln -s /usr/local/share/juise/import/junos.xsl /import/junos.xsl
 
 EXPOSE 3000
