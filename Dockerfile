@@ -39,4 +39,6 @@ WORKDIR /import
 
 RUN cp /usr/local/share/juise/import/junos.xsl ./junos.xsl
 
+WORKDIR /scripts
+
 ENTRYPOINT ["slaxproc","--check"]
